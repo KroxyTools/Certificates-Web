@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Crimson+Pro:wght@400;500;600;700&display=swap');
+
+/* Ultra Professional Certificate Verification Design System */
+
+@layer base {
+  :root {
+    --background: 210 25% 97%;
+    --foreground: 215 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 12%;
+
+    --primary: 215 50% 18%;
+    --primary-foreground: 40 35% 95%;
+
+    --secondary: 38 75% 50%;
+    --secondary-foreground: 215 50% 12%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 38 85% 52%;
+    --accent-foreground: 215 50% 12%;
+
+    --success: 158 65% 38%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 215 50% 18%;
+
+    --radius: 0.75rem;
+
+    /* Premium gradients */
+    --gradient-hero: linear-gradient(165deg, hsl(215 50% 12%) 0%, hsl(215 45% 22%) 40%, hsl(210 40% 28%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(215 50% 18%) 0%, hsl(215 45% 28%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 85% 52%) 0%, hsl(32 80% 42%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(158 65% 38%) 0%, hsl(165 55% 32%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-shimmer: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    
+    /* Elegant shadows */
+    --shadow-sm: 0 1px 3px hsl(215 35% 12% / 0.06), 0 1px 2px hsl(215 35% 12% / 0.04);
+    --shadow-md: 0 4px 12px hsl(215 35% 12% / 0.08), 0 2px 4px hsl(215 35% 12% / 0.04);
+    --shadow-lg: 0 12px 40px hsl(215 35% 12% / 0.12), 0 4px 12px hsl(215 35% 12% / 0.06);
+    --shadow-xl: 0 24px 60px hsl(215 35% 12% / 0.16), 0 8px 20px hsl(215 35% 12% / 0.08);
+    --shadow-gold: 0 8px 32px hsl(38 85% 52% / 0.25);
+    --shadow-inner-glow: inset 0 1px 0 rgba(255,255,255,0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 35% 6%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 30% 10%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 30% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 38 75% 50%;
+    --primary-foreground: 215 50% 12%;
+
+    --secondary: 215 35% 20%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 215 30% 15%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 38 85% 52%;
+    --accent-foreground: 215 50% 12%;
+
+    --success: 158 60% 42%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 38 75% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Crimson Pro', serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Glass morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Scanning animations */
+  @keyframes scanner-beam {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(38 85% 52% / 0.3), inset 0 0 20px hsl(38 85% 52% / 0.1);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(38 85% 52% / 0.5), inset 0 0 30px hsl(38 85% 52% / 0.2);
+    }
+  }
+
+  @keyframes rotate-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes data-stream {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes success-pop {
+    0% {
+      transform: scale(0) rotate(-180deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes stamp-appear {
+    0% {
+      transform: scale(4) rotate(-25deg);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(0.9) rotate(-10deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) rotate(-8deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes border-flow {
+    0%, 100% {
+      border-color: hsl(38 85% 52% / 0.3);
+    }
+    50% {
+      border-color: hsl(38 85% 52% / 0.8);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-scanner-beam {
+    animation: scanner-beam 1.8s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 8s linear infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  .animate-success-pop {
+    animation: success-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .animate-stamp {
+    animation: stamp-appear 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .animate-border-flow {
+    animation: border-flow 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Certificate paper texture */
+  .paper-texture {
+    background-image: 
+      linear-gradient(90deg, transparent 79px, hsl(215 35% 12% / 0.03) 79px, hsl(215 35% 12% / 0.03) 81px, transparent 81px),
+      linear-gradient(transparent 79px, hsl(215 35% 12% / 0.03) 79px, hsl(215 35% 12% / 0.03) 81px, transparent 81px);
+    background-size: 80px 80px;
+  }
+
+  /* Security pattern */
+  .security-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L100 25V75L50 100L0 75V25L50 0Z' fill='none' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: 50px 50px;
+  }
+}
