@@ -1,0 +1,37 @@
+{
+  "certificates": [
+    {
+      "serial": "KROXY-IO152",
+      "code": "KROXY-2026-CERT",
+      "name": "Alamin",
+      "title": "Certificate",
+      "issueDate": "2026-1-1",
+      "expiryDate": "Lifetime",
+      "organization": "Global Technology",
+      "image": "https://cdn.discordapp.com/attachments/1463411406455177250/1463411463564558377/file_00000000debc7206af6c934bde7e973a.png?ex=6971bba1&is=69706a21&hm=b460c676e12cd3a8b05268cedd611102e3e4cf72c826ca91f78175b92d18e414&",
+      "status": "valid"
+    },
+    {
+      "serial": "CERT-2024-000002",
+      "code": "VRF-F6G7H8I9J0",
+      "name": "Sarah Elizabeth Johnson",
+      "title": "Advanced Data Science Certificate",
+      "issueDate": "2024-03-20",
+      "expiryDate": "2027-03-20",
+      "organization": "International Academy of Sciences",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "status": "valid"
+    },
+    {
+      "serial": "CERT-2024-000003",
+      "code": "VRF-K1L2M3N4O5",
+      "name": "Michael David Thompson",
+      "title": "Cybersecurity Professional Certification",
+      "issueDate": "2023-06-10",
+      "expiryDate": "2024-06-10",
+      "organization": "National Security Institute",
+      "image": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&q=80",
+      "status": "expired"
+    }
+  ]
+}
